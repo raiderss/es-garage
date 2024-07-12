@@ -1,0 +1,318 @@
+@font-face {
+  font-family: Orbitron;
+  src: url(../font/Orbitron-Regular.ttf);
+}
+@font-face {
+  font-family: Rajdhani;
+  src: url(../font/Rajdhani-SemiBold.ttf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(../font/Inter.ttf);
+}
+@font-face {
+  font-family: Dancing Script;
+  src: url(../font/DancingScript-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Gilroy;
+  src: url(../font/Gilroy-Bold.ttf);
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../font/Poppins-Regular.ttf);
+}
+body {
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  transition: all 0.47s;
+}
+
+:root {
+  --scrolbar: #EAC43D;
+}
+
+.bar {
+  position: absolute;
+  left: 95rem;
+  top: 25.75rem;
+  width: 20rem;
+}
+.bar .contain {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.5rem;
+  overflow: hidden;
+}
+.bar .contain > li {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+.bar .contain .load {
+  background: linear-gradient(to right, #0094FF 0%, #6100FF 100%);
+  height: 0.5rem;
+  transition: width 0.3s ease-in-out;
+}
+
+.move {
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  margin: auto auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 5%;
+  z-index: 1000000000000000000000;
+}
+
+.header {
+  position: absolute;
+  left: 5rem;
+}
+.header > input {
+  position: absolute;
+  right: 8rem;
+  top: 6.5rem;
+  text-align: left;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  z-index: 99999999;
+}
+.header > input ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6117647059);
+}
+.header > input ::placeholder {
+  color: rgba(255, 255, 255, 0.6117647059);
+}
+
+.container {
+  position: relative;
+  top: 54rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  justify-content: flex-start;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  z-index: 99999999;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.car {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 62.5rem;
+  min-width: 10rem;
+}
+.car .border {
+  position: relative;
+  width: 25rem;
+  height: 10rem;
+  background: linear-gradient(143.97deg, rgba(255, 255, 255, 0.1) -17.08%, rgba(0, 0, 0, 0.5) 74.26%);
+  box-shadow: 0 1.5rem 7rem rgba(0, 0, 0, 0.16);
+  border-radius: 1.25rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.car .border:hover {
+  transform: translateY(-5px) rotateY(10deg);
+  box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.3);
+}
+.car .border .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 0.625rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 10;
+}
+.car .border .details .title {
+  position: absolute;
+  left: 0;
+  width: 12rem;
+  top: -1.5rem;
+  display: flex;
+  font-size: 2.1rem;
+  color: #ffd700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.car .border .details .icon {
+  margin-right: 0.5rem;
+}
+.car .border .favorite {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  color: #ffd700;
+  transition: color 0.3s ease;
+  font-family: "Rajdhani", sans-serif;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  z-index: 10;
+}
+.car .border .favorite:hover {
+  color: #ffffff;
+}
+.car .border .favorite .icon {
+  margin-right: 0.5rem;
+}
+.car .border .car-image {
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: translate(45%, -5%) rotateY(10deg);
+  transition: transform 0.3s ease;
+}
+.car .border .car-image:hover {
+  transform: translate(35%, 0%) rotateY(-5deg);
+}
+
+.features {
+  position: absolute;
+  left: 85.75rem;
+  top: 5.6875rem;
+}
+
+.button {
+  position: absolute;
+  left: 93rem;
+  top: 39.55rem;
+}
+
+#app {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(7, 6, 21, 0.85) 0%, rgba(7, 6, 21, 0.85) 30%, rgba(7, 6, 21, 0) 50%, rgba(7, 6, 21, 0.85) 80%, rgba(7, 6, 21, 0.85) 100%);
+  overflow: hidden;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (width: 4096px) and (height: 2160px) {
+  html {
+    font-size: 31px;
+  }
+}
+@media screen and (width: 2560px) and (height: 1440px) {
+  html {
+    font-size: 21.32px;
+  }
+}
+@media screen and (width: 3440px) and (height: 1440px) {
+  html {
+    font-size: 21.9px;
+  }
+}
+@media screen and (width: 1920px) and (height: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (width: 1600px) and (height: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (width: 1440px) and (height: 900px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (width: 1680px) and (height: 1050px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (width: 1600px) and (height: 900px) {
+  html {
+    font-size: 13.3px;
+  }
+}
+@media screen and (width: 1768px) and (height: 992px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (width: 1366px) and (height: 768px) {
+  html {
+    font-size: 11.38px;
+  }
+}
+@media screen and (width: 1400px) and (height: 1050px) {
+  html {
+    font-size: 11.7px;
+  }
+}
+@media screen and (width: 1280px) and (height: 1024px) {
+  html {
+    font-size: 11.7px;
+  }
+}
+@media screen and (width: 1280px) and (height: 720px) {
+  html {
+    font-size: 11px;
+  }
+}
+@media screen and (width: 1024px) and (height: 768px) {
+  html {
+    font-size: 10.05px;
+  }
+}
+@media screen and (width: 832px) and (height: 624px) {
+  html {
+    font-size: 8.05px;
+  }
+}
+@media screen and (width: 800px) and (height: 600px) {
+  html {
+    font-size: 8px;
+  }
+}/*# sourceMappingURL=app.css.map */

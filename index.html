@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>garage</title>
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+
+  <div id="app" v-if="ui">
+
+    <div class="move"></div>
+
+    <div class="header" ref="header">
+      <svg width="118.625rem" height="18.75rem" viewBox="0 0 1898 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text transform="translate(643 82)" fill="white" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="20" font-weight="500" letter-spacing="0em"><tspan x="0" y="22">INFORMATION ABOUT&#10;</tspan><tspan x="0" y="52">YOUR GARAGE</tspan></text>
+        <text transform="translate(1111 82)" fill="white" fill-opacity="0.22" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="500" letter-spacing="0em"><tspan x="0" y="15.4">TOTAL CARS</tspan></text>
+        <text transform="translate(1111 97)" fill="white" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="36" letter-spacing="0em"><tspan x="39.7188" y="39.6">{{car.length}}</tspan></text>
+        <text transform="translate(874 83)" fill="white" fill-opacity="0.22" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="14" font-weight="500" letter-spacing="0em"><tspan x="0.238281" y="11.9">CARS ON THE STREET</tspan></text>
+        <text transform="translate(894 97)" fill="#0055FF" xml:space="preserve" style="white-space: pre" font-family="Poppins" font-size="36" letter-spafcing="0em"><tspan x="91.7617" y="39.6">{{impound}}</tspan></text>
+        <g filter="url(#filter0_bd_392_1520)">
+        <rect x="1409" y="75" width="374" height="86" rx="5" fill="url(#paint0_linear_392_1520)" fill-opacity="0.2" shape-rendering="crispEdges"/>
+        <rect x="1408.5" y="74.5" width="375" height="87" rx="5.5" stroke="url(#paint1_radial_392_1520)" stroke-opacity="0.43" shape-rendering="crispEdges"/>
+        <rect x="1408.5" y="74.5" width="375" height="87" rx="5.5" stroke="url(#paint2_radial_392_1520)" stroke-opacity="0.23" shape-rendering="crispEdges"/>
+        <rect x="1408.5" y="74.5" width="375" height="87" rx="5.5" stroke="url(#paint3_radial_392_1520)" shape-rendering="crispEdges"/>
+        <rect x="1408.5" y="74.5" width="375" height="87" rx="5.5" stroke="#95A3C9" stroke-opacity="0.29" shape-rendering="crispEdges"/>
+        <path d="M1749.37 125.753L1741.76 118.145C1742.94 116.618 1743.58 114.752 1743.58 112.789C1743.58 110.439 1742.66 108.236 1741 106.575C1739.34 104.914 1737.14 104 1734.79 104C1732.44 104 1730.23 104.917 1728.58 106.575C1726.91 108.233 1726 110.439 1726 112.789C1726 115.136 1726.92 117.345 1728.58 119.003C1730.23 120.664 1732.44 121.578 1734.79 121.578C1736.75 121.578 1738.62 120.939 1740.14 119.762L1747.75 127.367C1747.77 127.39 1747.8 127.407 1747.83 127.419C1747.86 127.431 1747.89 127.438 1747.92 127.438C1747.95 127.438 1747.98 127.431 1748.01 127.419C1748.04 127.407 1748.07 127.39 1748.09 127.367L1749.37 126.093C1749.39 126.07 1749.41 126.044 1749.42 126.015C1749.43 125.986 1749.44 125.954 1749.44 125.923C1749.44 125.891 1749.43 125.86 1749.42 125.831C1749.41 125.802 1749.39 125.775 1749.37 125.753ZM1739.43 117.43C1738.19 118.669 1736.54 119.352 1734.79 119.352C1733.04 119.352 1731.39 118.669 1730.15 117.43C1728.91 116.188 1728.23 114.541 1728.23 112.789C1728.23 111.037 1728.91 109.388 1730.15 108.148C1731.39 106.909 1733.04 106.227 1734.79 106.227C1736.54 106.227 1738.19 106.906 1739.43 108.148C1740.67 109.391 1741.35 111.037 1741.35 112.789C1741.35 114.541 1740.67 116.19 1739.43 117.43Z" fill="white"/>
+        </g>
+        <rect x="610" y="86" width="3" height="56" rx="1.5" fill="url(#paint4_linear_392_1520)"/>
+        <text transform="translate(0 13)" fill="white" fill-opacity="0.02" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" font-size="217.379" font-weight="bold" letter-spacing="0em"><tspan x="0" y="165.475">GARAGE</tspan></text>
+        <g filter="url(#filter1_d_392_1520)">
+        <text transform="translate(131 74)" fill="white" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" font-size="96" font-weight="bold" letter-spacing="0em"><tspan x="0" y="73.032">GARAGE</tspan></text>
+        </g>
+        <defs>
+        <filter id="filter0_bd_392_1520" x="1294.87" y="-15.135" width="602.27" height="314.27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feGaussianBlur in="BackgroundImageFix" stdDeviation="10"/>
+        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_392_1520"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="24"/>
+        <feGaussianBlur stdDeviation="56.5675"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
+        <feBlend mode="normal" in2="effect1_backgroundBlur_392_1520" result="effect2_dropShadow_392_1520"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_392_1520" result="shape"/>
+        </filter>
+        <filter id="filter1_d_392_1520" x="106.28" y="55.2725" width="360.288" height="121.728" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset/>
+        <feGaussianBlur stdDeviation="15"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.64 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_392_1520"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_392_1520" result="shape"/>
+        </filter>
+        <linearGradient id="paint0_linear_392_1520" x1="1397.94" y1="51.4788" x2="1420.01" y2="183.467" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1B87B5" stop-opacity="0.35"/>
+        <stop offset="1" stop-opacity="0.15"/>
+        </linearGradient>
+        <radialGradient id="paint1_radial_392_1520" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1596 118) rotate(-165.951) scale(245.969 90.1893)">
+        <stop stop-color="white"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="paint2_radial_392_1520" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1596 118) rotate(11.1801) scale(228.741 63.2246)">
+        <stop stop-color="#35302E"/>
+        <stop offset="1" stop-color="#E3CD4B" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="paint3_radial_392_1520" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1596 118) rotate(167.462) scale(209.959 66.503)">
+        <stop stop-color="white"/>
+        <stop offset="1" stop-color="#151515" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="paint4_linear_392_1520" x1="611.5" y1="86" x2="611.5" y2="142" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#6100FF"/>
+        <stop offset="1" stop-color="#0094FF"/>
+        </linearGradient>
+        </defs>
+        </svg>
+        <input v-model="searchQuery" type="text" placeholder="SEARTH CAR">
+    </div>
+
+    <div class="bar">
+      <div class="contain" v-for="feature in features" :key="feature.label">
+        <li>{{ feature.label }}</li>
+        <div class="load" :style="{ width: feature.value + '%' }"></div>
+      </div>
+    </div>
+ 
+    <div class="container">
+      <div class="car" @click="info(vehicle)" v-for="vehicle in filteredCars" :key="vehicle.vehicle">
+        <div class="border">          
+          <div class="details">
+            <p class="title">{{ vehicle.title }}</p>
+          </div>
+          <div class="favorite">
+            <span class="icon">⭐</span> ADD TO FAVORITES
+          </div>
+          <img :src="`./assets/car/${vehicle.model}.png`" :alt="vehicle.vehicle" class="car-image" />
+        </div>
+      </div>
+    </div>
+
+    <div class="features" v-if="ui">
+      <svg width="38.25rem" height="40.9375rem" viewBox="0 0 612 655" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_bd_392_1540)">
+        <g clip-path="url(#clip0_392_1540)">
+        <rect x="497" y="91" width="425" height="382" rx="15" transform="rotate(90 497 91)" fill="url(#paint0_linear_392_1540)" fill-opacity="0.2" shape-rendering="crispEdges"/>
+        <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" font-size="24" font-weight="600" letter-spacing="0em"><tspan x="149" y="144.508">INFORMATION ABOUT YOUR CAR:</tspan></text>
+        <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="149" y="205.34">NAME:</tspan></text>
+        <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" text-anchor="middle" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="400" y="201.34">{{select.name}}</tspan></text>
+        <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="149" y="233.34">NUBMER PLATE:</tspan></text>
+        <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" text-anchor="middle" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="400" y="233.34">{{select.plate}}</tspan></text>
+        <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="149" y="265.34">CAR ID:</tspan></text>
+        <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="149" y="297.34">THE CAR IS LOCATED:</tspan></text>
+        <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="400" y="265.34">{{select.id}}</tspan></text>
+        <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" text-anchor="middle" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="405" y="297.34">{{select.located}}</tspan></text>
+        </g>
+        <rect x="497.5" y="90.5" width="426" height="383" rx="15.5" transform="rotate(90 497.5 90.5)" stroke="url(#paint5_radial_392_1540)" stroke-opacity="0.43" shape-rendering="crispEdges"/>
+        <rect x="497.5" y="90.5" width="426" height="383" rx="15.5" transform="rotate(90 497.5 90.5)" stroke="url(#paint6_radial_392_1540)" stroke-opacity="0.23" shape-rendering="crispEdges"/>
+        <rect x="497.5" y="90.5" width="426" height="383" rx="15.5" transform="rotate(90 497.5 90.5)" stroke="url(#paint7_radial_392_1540)" shape-rendering="crispEdges"/>
+        <rect x="497.5" y="90.5" width="426" height="383" rx="15.5" transform="rotate(90 497.5 90.5)" stroke="#95A3C9" stroke-opacity="0.29" shape-rendering="crispEdges"/>
+        </g>
+        <defs>
+        <filter id="filter0_bd_392_1540" x="-281.972" y="-305.972" width="1175.94" height="1218.94" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feGaussianBlur in="BackgroundImageFix" stdDeviation="197.986"/>
+        <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_392_1540"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="24"/>
+        <feGaussianBlur stdDeviation="56.5675"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
+        <feBlend mode="normal" in2="effect1_backgroundBlur_392_1540" result="effect2_dropShadow_392_1540"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_392_1540" result="shape"/>
+        </filter>
+        <linearGradient id="paint0_linear_392_1540" x1="484.432" y1="-13.4779" x2="760.444" y2="408.768" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1B87B5" stop-opacity="0.35"/>
+        <stop offset="1" stop-opacity="0.15"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_392_1540" x1="404" y1="367" x2="404" y2="619" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#6100FF"/>
+        <stop offset="1" stop-color="#0094FF"/>
+        </linearGradient>
+        <linearGradient id="paint2_linear_392_1540" x1="238.5" y1="408" x2="238.5" y2="494" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#6100FF"/>
+        <stop offset="1" stop-color="#0094FF"/>
+        </linearGradient>
+        <linearGradient id="paint3_linear_392_1540" x1="340" y1="441" x2="340" y2="628" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#6100FF"/>
+        <stop offset="1" stop-color="#0094FF"/>
+        </linearGradient>
+        <linearGradient id="paint4_linear_392_1540" x1="256" y1="482" x2="256" y2="586" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#6100FF"/>
+        <stop offset="1" stop-color="#0094FF"/>
+        </linearGradient>
+        <radialGradient id="paint5_radial_392_1540" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(709.5 282) rotate(-135.634) scale(379.292 295.219)">
+        <stop stop-color="white"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="paint6_radial_392_1540" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(709.5 282) rotate(37.6882) scale(322.235 226.537)">
+        <stop stop-color="#35302E"/>
+        <stop offset="1" stop-color="#E3CD4B" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="paint7_radial_392_1540" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(709.5 282) rotate(139) scale(308.598 228.384)">
+        <stop stop-color="white"/>
+        <stop offset="1" stop-color="#151515" stop-opacity="0"/>
+        </radialGradient>
+        <clipPath id="clip0_392_1540">
+        <rect x="497" y="91" width="425" height="382" rx="15" transform="rotate(90 497 91)" fill="white"/>
+        </clipPath>
+        </defs>
+        </svg>
+    </div>
+  
+    <div class="button">
+      <svg width="23.875rem" height="13.75rem" viewBox="0 0 382 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect @click="spawn" y="105" width="382" height="88" rx="8" fill="url(#paint0_linear_471_1800)"/>
+        <text @click="spawn" fill="white" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" font-size="20" font-weight="600" letter-spacing="0em"><tspan x="118.889" y="156.84">USE THIS VEHICLE</tspan></text>
+        <rect @click="parked" width="382" height="88" rx="8" fill="url(#paint1_linear_471_1800)" fill-opacity="0.1"/>
+        <text @click="parked" v-if="select.state === 0" fill="white" fill-opacity="0.5" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" font-size="20" font-weight="600" letter-spacing="0em">
+          <tspan x="70.4609" y="51.84">PARK THE CAR IN THE GARAGE</tspan>
+        </text>
+        <text text-anchor="middle" v-else fill="white" fill-opacity="0.5" xml:space="preserve" style="white-space: pre" font-family="Rajdhani" font-size="20" font-weight="600" letter-spacing="0em">
+          <tspan x="195.4609" y="51.84">VEHICLE REMAINS PARKED</tspan>
+        </text>
+        <defs>
+        <linearGradient id="paint0_linear_471_1800" x1="28.8983" y1="156.333" x2="286.667" y2="147.327" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#6100FF"/>
+        <stop offset="1" stop-color="#8000FF"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_471_1800" x1="28.8983" y1="51.3333" x2="286.667" y2="42.3274" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white"/>
+        <stop offset="1" stop-color="white"/>
+        </linearGradient>
+        </defs>
+        </svg>
+    </div>
+
+
+  </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="./assets/data.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="./vue.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</body>
+
+</html>
