@@ -80,10 +80,7 @@ Customize.Garages = {
 
 }
 
-
-
-
-function GetFramework() -- eyw knk cözdüm
+function GetFramework() 
     local Get = nil
     if Customize.Framework == "ESX" then
         while Get == nil do
