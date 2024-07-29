@@ -4,6 +4,10 @@
 [![Discord](https://img.shields.io/badge/Discord-Join-blue?style=for-the-badge&logo=discord)](https://discord.gg/EkwWvFS)
 [![Tebex Store](https://img.shields.io/badge/Tebex-Store-green?style=for-the-badge&logo=shopify)](https://eyestore.tebex.io/)
 
+SETUP Easy:
+ALTER TABLE `player_vehicles`
+ADD COLUMN `damage` TEXT DEFAULT NULL;
+
 **FiveM Garage Script** is a comprehensive solution that allows players to manage their vehicles in a structured and immersive way. This script is compatible with both QBCore and ESX frameworks, providing a robust and seamless integration.
 
 ![FiveM Garage Script Preview](https://github.com/user-attachments/assets/3f1f1b19-94ac-4ddc-8f8b-381e09abb30d)
