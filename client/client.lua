@@ -68,7 +68,6 @@ function ProcessVehicles(vehicles, text)
                 CategorizeVehicle(v, text.Type, class, data)
                 LastSpawnPos = text.VehSpawnPos
                 LastCamera = text.Camera
-                Camera()
             elseif v.state == 0 then 
                 table.insert(impound, v)
             end
@@ -86,9 +85,15 @@ function ProcessVehicles(vehicles, text)
             SetWeatherTypeNowPersist("EXTRASUNNY")
             NetworkOverrideClockTime(21, 0, 0) 
             DisplayRadar(false)
+            Camera()  -- Only call Camera if there are vehicles
         else
-            print("No vehicles available in the garage.")
+            -- No vehicles available in the garage, notify the user
+            TriggerEvent('chat:addMessage', {
+                args = { '^1No vehicles available in the garage.' }
+            })
         end
+    else
+        print("No vehicles found in the database.")
     end
 end
 
