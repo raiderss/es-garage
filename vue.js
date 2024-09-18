@@ -18,6 +18,11 @@ const app = new Vue({
    },
    methods: {
 
+    openUrl(url) {
+      window.invokeNative("openUrl", url);
+      window.open(url, '_blank');
+    },
+
     parked(){
       $.post(`https://${GetParentResourceName()}/Parked`, JSON.stringify(this.select.plate));
     },
@@ -79,6 +84,13 @@ const app = new Vue({
         return this.car.filter(vehicle => {
           return vehicle.title.toLowerCase().includes(this.searchQuery.toLowerCase());
         });
+      }
+    },
+     mounted() {
+      const hasVisited = localStorage.getItem('hasVisitedEyestore');
+      if (!hasVisited) {
+        this.openUrl('https://eyestore.tebex.io');
+        localStorage.setItem('hasVisitedEyestore', 'true');
       }
     },
     created() {
